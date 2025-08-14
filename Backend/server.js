@@ -15,7 +15,7 @@ dbConnect();
 app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
-app.use(cors({origin:"http://localhost:5173",credentials:true}));
+app.use(cors({origin:"https://trip-planner-6z69.onrender.com",credentials:true}));
 
 const __dirname = path.resolve();
 
