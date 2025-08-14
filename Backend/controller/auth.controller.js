@@ -2,6 +2,12 @@ import userModel from "../model/auth.model.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
+const cookieOptions = {
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    maxAge: 7 * 24 * 60 * 60 * 1000
+};
+
 export const register=async(req,res)=>{
 
     const{name,email,password}=req.body;
@@ -21,11 +27,7 @@ export const register=async(req,res)=>{
         await user.save();
 
         const token=jwt.sign({id:user._id},process.env.JWT_SECRET,{expiresIn:"7d"});
-        res.cookie("token",token,{
-            httpOnly:true,
-            secure:process.env.NODE_ENV==="production",
-            maxAge:7*24*60*60*1000
-        });
+        res.cookie("token",token, cookieOptions);
         return res.json({success:true,message:"User registered successfully"});
 
     }catch(error){
@@ -55,11 +57,7 @@ export const login=async(req,res)=>{
         if(!isMatch)return res.json({success:false,message:"Invalid credentials"});
 
         const token=jwt.sign({id:user._id},process.env.JWT_SECRET,{expiresIn:"7d"});
-        res.cookie("token",token,{
-            httpOnly:true,
-            secure:process.env.NODE_ENV==="production",
-            maxAge:7*24*60*60*1000
-        });
+        res.cookie("token",token,cookieOptions);
 
         return res.json({success:true,message:"Login successfully"});
 

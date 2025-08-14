@@ -41,13 +41,13 @@ const Navbar = () => {
       {/* Desktop Menu */}
       <div className="hidden md:flex items-center space-x-4">
         <button
-          onClick={() => navigate("/create-trip")}
+          onClick={() => {isLogin ? navigate('/create-trip') : navigate('/login')}}
           className="px-4 py-2 bg-gray-100 rounded-full hover:bg-gray-200 transition"
         >
           + Create Trip
         </button>
         <button
-          onClick={() => navigate("/my-trip")}
+          onClick={() =>{isLogin ? navigate('/my-trip') : navigate('/login')}}
           className="px-4 py-2 bg-gray-100 rounded-full hover:bg-gray-200 transition"
         >
           My Trips🏄

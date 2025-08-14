@@ -1,10 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 import Navbar from './../component/Navbar';
+import { useContext } from 'react';
+import { AppContext } from '../context/AppContext';
 
 
 const HomePage = () => {
 
   const navigate = useNavigate();
+  const{isLogin}=useContext(AppContext)
 
   return (
     <div className='h-screen bg-white'>
@@ -21,7 +24,7 @@ const HomePage = () => {
           Your personal trip planner and travel curator, creating custom itineraries
           tailored to your interests and budget.
         </p>
-        <button onClick={()=>navigate('/create-trip')} className="mt-6 px-6 py-3 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition">
+        <button onClick={()=>{isLogin ? navigate('/create-trip') : navigate('/login')}} className="mt-6 px-6 py-3 bg-black text-white rounded-lg font-semibold hover:bg-gray-800 transition">
           Get Started, It’s Free
         </button>
       </div>

@@ -16,6 +16,7 @@ const CreateTripPage = () => {
     budget,setBudget,
     companions,setCompanions,
     setAiRes,
+    userData,
     backendUrl
   }=useContext(AppContext);
 

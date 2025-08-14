@@ -22,9 +22,6 @@ export default function MyTripPage() {
       const data=await axios.get(backendUrl+'/auth/get-trip');
       if(data.data.success)
       {
-          console.log(data.data.getTrip);
-          // console.log(data.data.getTrip.reverse());
-          // toast.success(data.data.message);
           setGetTrips((data.data.getTrip).reverse());
       }
       else
@@ -82,7 +79,7 @@ export default function MyTripPage() {
             });
           }}
           key={index}
-          className="bg-white rounded-xl shadow-md p-4 sm:p-6 hover:shadow-lg transition duration-300 border border-gray-100 cursor-pointer"
+          className="bg-white rounded-xl shadow-md p-4 sm:p-6 hover:shadow-lg transition duration-300 border border-gray-100 cursor-pointer hover:border-blue-400"
         >
           {/* Location */}
           <div className="flex items-center gap-2 mb-2 sm:mb-3">
