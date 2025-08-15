@@ -5,7 +5,6 @@ import axios from 'axios'
 import logo from '../assets/trip.png'
 import { AppContext } from '../context/AppContext';
 import { ClipLoader } from "react-spinners";
-import { set } from 'mongoose';
 
 
 
