@@ -54,7 +54,7 @@ This app allows users to:
 
 ## 📸 Screenshots
 ### Home Page
-![Home Page](./Frontend/src/assets/Screenshot%202025-08-15%20121313.png)
+![Home Page](./Frontend/src/assets/HomePage.png)
 
 ### Trip Creation
 ![Trip Creation](./Frontend/src/assets/Screenshot%202025-08-15%20121325.png)
@@ -62,4 +62,4 @@ This app allows users to:
 ---
 
 ## 📜 License
-MIT License © 2025 [Your Name]
+MIT License © 2025 Rohan Rajak
