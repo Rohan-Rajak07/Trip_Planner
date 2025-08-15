@@ -54,10 +54,10 @@ This app allows users to:
 
 ## 📸 Screenshots
 ### Home Page
-![Home Page](./Screenshot%202025-08-15%20121313.png)
+![Home Page](./Frontend/src/assets/Screenshot%202025-08-15%20121313.png)
 
 ### Trip Creation
-![Trip Creation](./Screenshot%202025-08-15%20121325.png)
+![Trip Creation](./Frontend/src/assets/Screenshot%202025-08-15%20121325.png)
 
 ---
 
