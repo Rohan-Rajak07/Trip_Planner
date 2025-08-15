@@ -58,7 +58,7 @@ This app allows users to:
 ![Home Page](./Frontend/src/assets/HomePage.png)
 
 ### Trip Creation
-![Trip Creation](./Frontend/src/assets/Screenshot%202025-08-15%20121325.png)
+![Trip Creation](./Frontend/src/assets/CreatePage.png)
 
 ---
 

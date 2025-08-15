@@ -6,7 +6,7 @@ import {toast} from 'react-toastify'
 export const AppContextProvider=(props)=>{
     
     axios.defaults.withCredentials=true;
-    const backendUrl="https://trip-planner-6z69.onrender.com";
+    const backendUrl="https://trip-planner-utf4.onrender.com";
 
     const [destination, setDestination] = useState("");
     const [days, setDays] = useState("");
