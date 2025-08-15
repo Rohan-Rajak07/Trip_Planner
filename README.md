@@ -1,6 +1,6 @@
 # 🌍 Trip Planner (MERN + AI)
 
-**Live Demo:** [https://trip-planner-6z69.onrender.com](https://trip-planner-6z69.onrender.com)
+**🚀Live Demo:** [https://trip-planner-6z69.onrender.com](https://trip-planner-6z69.onrender.com)
 
 An **AI-powered trip planner** built with the **MERN stack** that helps users create personalized travel itineraries based on their preferences such as destination, budget, trip duration, and travel companions. Perfect for travelers who want **instant, tailored travel plans** without spending hours researching.
 
