@@ -6,6 +6,7 @@ An **AI-powered trip planner** built with the **MERN stack** that helps users cr
 
 ---
 
+
 ## ✨ Features
 - **🔐 User Authentication** – Secure Register, Login, Logout using HTTP-only cookies.
 - **🤖 AI Trip Generator** – Creates detailed itineraries with activities, recommendations, and day-by-day plans.
@@ -19,7 +20,7 @@ An **AI-powered trip planner** built with the **MERN stack** that helps users cr
 ## 🛠 Tech Stack
 **Frontend:** React + Vite, Tailwind CSS  
 **Backend:** Node.js, Express.js, MongoDB  
-**AI:** OpenAI API  
+**AI:** Google Gemini API  
 **Authentication:** JWT + HTTP-only cookies  
 **Deployment:** Render  
 
@@ -37,7 +38,7 @@ This app allows users to:
 
 ## ⚙️ How It Works
 1. **User Input** – You fill in your trip preferences.
-2. **AI Processing** – The backend sends data to OpenAI’s API for itinerary generation.
+2. **AI Processing** – The backend sends data to **Google Gemini API** for itinerary generation.
 3. **Data Storage** – MongoDB stores your trip details securely.
 4. **User Dashboard** – View, manage, or delete trips anytime.
 
