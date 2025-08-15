@@ -35,6 +35,7 @@ if(process.env.NODE_ENV==="production")
             res.send("It running on Development mode...");
         });
     }
+    
 const PORT=process.env.PORT;
 app.listen(PORT,()=>{
     console.log(`Server is running on http://localhost:${PORT}`);

@@ -53,7 +53,7 @@ const Navbar = () => {
           My Trips🏄
         </button>
         {userData && isLogin ? (
-          <div className="w-10 h-10 flex justify-center items-center rounded-full bg-black text-white relative group">
+          <div className="w-10 h-10 flex justify-center items-center rounded-full bg-black  text-white relative group">
             <p>{userData.name[0].toUpperCase()}</p>
             <div className="absolute hidden group-hover:block top-0 right-0 z-10 text-black rounded pt-10">
               <ul className="list-none m-0 p-2 bg-gray-100 text-sm">

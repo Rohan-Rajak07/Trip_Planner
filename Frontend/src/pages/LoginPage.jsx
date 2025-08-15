@@ -4,6 +4,11 @@ import { toast } from 'react-toastify';
 import axios from 'axios'
 import logo from '../assets/trip.png'
 import { AppContext } from '../context/AppContext';
+import { ClipLoader } from "react-spinners";
+import { set } from 'mongoose';
+
+
+
 const LoginPage = () => {
   const navigate=useNavigate()
 
@@ -11,6 +16,7 @@ const LoginPage = () => {
   const[name,setName]=useState('');
   const[email,setEmail]=useState('');
   const[password,setPassword]=useState('');
+  const[loading, setLoading] = useState(false);
 
   const{isAuth,setIsLogin,backendUrl}=useContext(AppContext)
   const onSubmitHandler= async(e)=>
@@ -19,6 +25,7 @@ const LoginPage = () => {
     {
       e.preventDefault();
       axios.defaults.withCredentials=true
+      setLoading(true);
       if(state==='Sign Up')
       {
         const data=await axios.post(backendUrl+'/auth/register',{name,email,password})
@@ -27,11 +34,13 @@ const LoginPage = () => {
           toast.success(data.data.message)
           setIsLogin(true);
           navigate('/')
+          setLoading(false);
           isAuth();
         }
         else
         {
           toast.error(data.data.message)
+          setLoading(false);
         }
       }
       else
@@ -42,11 +51,13 @@ const LoginPage = () => {
           toast.success(data.data.message);
           setIsLogin(true);
           navigate('/');
-          isAuth();        
+          setLoading(false);
+          isAuth();
         }
         else
         {
           toast.error(data.data.message)
+          setLoading(false);
         }
       }
     }catch(error)
@@ -127,7 +138,7 @@ const LoginPage = () => {
           >Forgot password?</p>
 
           <button className="w-full py-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-indigo-900 text-white font-medium">
-            {state}
+            {loading ? <ClipLoader color="white" size={20} /> : state}
           </button>
         </form>
 
